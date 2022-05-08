@@ -1,4 +1,4 @@
-package harmlessransomnote;
+package algos.harmlessransomnote;
 
 import java.util.HashMap;
 import java.util.Map;

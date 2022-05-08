@@ -1,4 +1,4 @@
-package harmlessransomnote;
+package algos.harmlessransomnote;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -33,3 +33,4 @@ public class SolutionTest {
         Assert.assertTrue(actual);
     }
 }
+
