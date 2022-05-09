@@ -1,6 +1,6 @@
 package algos.ultraEncryptor;
 /* to increase the readability of the test and of the assertions itself,
- I chose to import statically the respective class. This was I can refer
+ I chose to import statically the respective class. This way I can refer
  directly to the assertion method itself without the representing class as a prefix */
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
