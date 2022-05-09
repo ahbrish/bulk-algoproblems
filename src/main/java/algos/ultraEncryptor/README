@@ -1,0 +1,63 @@
+# Code Differently Message Encryptor
+
+Students at Code Differently want to pass notes to one another. In case a note is confiscated
+by a staff member, the students decide to encrypt the messages. They do so by shifting each letter
+in the `message` by a `shift`.
+
+## Example
+
+### Input
+Message: Kaleb
+Shift 3
+
+### Output
+Ndohe
+
+### Explanation
+```
+K => +3 => N
+a -> +3 -> d
+l -> +3 -> o
+e -> +3 -> h
+b -> +3 -> e
+```
+
+> Research [Characters in Java](https://www.javatpoint.com/post/java-character)
+
+
+# Added new feature
+The last encryptor has some limitations, it shifts text correctly, but it shifts all punctuation
+and whitespace too! Let's fix this!
+
+## Example
+
+### Input
+Message: Hello, World!
+Shift 3
+
+### Output
+Khoor, Zruog!
+
+### Explanation
+Note that the letters shift as before but non letters stay the same
+
+
+#Added new feature
+
+Out updated encryptor still had some issues, it shifts text correctly, but does not wrap around
+to the beginning again. A shift of one to z didn't produce an a! Let's fix it!
+
+## Example
+
+### Input
+Message: Hello, World!
+Shift 4
+
+### Output
+Lipps, Asvph!
+
+### Explanation
+Note that the letters shift as before but non letters stay the same
+
+## Submission
+Push your changes to GitHub
