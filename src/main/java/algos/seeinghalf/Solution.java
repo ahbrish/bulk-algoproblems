@@ -1,32 +1,33 @@
 package algos.seeinghalf;
 
 public class Solution {
-    public String seeHalf(String message){
+    public String seeHalf(String message) {
         // return type String
-        // if the original word has letter that are double letter make them single letter
-        // if the original word has letter was a single letter, double it
+        // if the original word has letters that are double letters make them single letters
+        // if the original word has a letter that was a single letter, double it
 
+        String newMessage = "";
 
-        String checkLetter = "";
-        String currentChar = "";
-        String nextChar = "";
         int i = 0;
-        while (i < message.length()-1) {
-            currentChar = String.valueOf(message.charAt(i));
-            nextChar  = String.valueOf(message.charAt(i+1));
+        int length = message.length();
+        while (i < length-1) {
+            String currentLetter = String.valueOf(message.charAt(i));
+            String nextLetter = String.valueOf(message.charAt(i + 1));
 
-            if(currentChar.equals(nextChar)) {
-                checkLetter += currentChar;
-                i += 2;
+            if (currentLetter.equals(nextLetter)) {
+                newMessage += currentLetter;
+                i+=2;
             }
-            else{
-                checkLetter += currentChar + currentChar;
+
+            else {
+                newMessage += currentLetter + currentLetter;
+
                 if(i == message.length()-2){
-                    checkLetter += nextChar + nextChar;
+                    newMessage += nextLetter + nextLetter;
                 }
                 i++;
             }
         }
-        return checkLetter;
+        return newMessage;
     }
 }

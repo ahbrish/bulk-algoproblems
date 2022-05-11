@@ -1,0 +1,33 @@
+# Multiples of 10
+
+Provided an array of integers, return the array where each integer is updated to the
+next closest multiple of the integer and 10.
+
+## Example 1
+
+### Input
+[10, 3, 5, 6]
+
+### Output
+[10, 30, 10, 30]
+
+### Explanation
+
+10 is a multiple a 10
+
+30 is the lowest multiple of 10 and 3 (10, and 20 are not multiples of 3)
+
+10 is a multiple of 5 and 10
+
+30 is the lowest multiple of 10 and 6 (10, and 20 are not multiples of 6)
+
+## Example 2
+
+### Input
+[7, 2, 10, 9]
+
+### Output
+[70, 10, 10, 90]
+
+## Submission
+Push your changes to GitHub
