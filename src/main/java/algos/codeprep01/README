@@ -1,6 +1,6 @@
 # Problem 01 - Count Duplicate Letters
 
-Given a letter count the number of times it appears:
+Given a letter, count the number of times it appears:
 
 * Use a HashMap to accomplish this task.
 
@@ -24,7 +24,7 @@ You want to move through one name at a time, either moving left or right, in the
 The application's name display is circular, so when the last person in the array is reached in either direction,
 the next person is at the other end of the array.
 
-Given the name of the next person needed, determin the minimum number of left or right moves to reach it.
+Given the name of the next person needed, determine the minimum number of left or right moves to reach it.
 
 Example:
 
@@ -35,7 +35,7 @@ target = "Hakim"
 ```
 
 The person currently selected is "Greg" at index 1. He needs to tag "Hakim" at index 0.
-It can be reached by moving right 3 steps left 1 step. The minium number of moves is 1.
+It can be reached by moving right 3 steps or left 1 step. The minimum number of moves is 1.
 
 # Problem 03 - Are we related
 
