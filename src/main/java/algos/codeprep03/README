@@ -92,6 +92,3 @@ Constraints
  - 0 < startindex <= n-1
  1 <= lengths of tools[i] and target <= 100
 
-
-
-

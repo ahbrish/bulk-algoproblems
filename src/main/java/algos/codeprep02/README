@@ -1,4 +1,4 @@
-# 1
+# Four Cardinal Directions
 
 You are given a string representing a sequence of N arrows each pointing in one of the four cardinal directions:
 up('^'), down('v'), left('<'), right('>').
@@ -21,3 +21,75 @@ Assume that:
     - string S consists only of the following characters: "^", "v", "<", and/or ">".
 
 In your solution focus on correctness. The performance of your solution will not be the focus of the assessment.
+
+
+
+
+
+
+
+
+
+
+#2
+
+You are given an array of integers. Your task is to create pairs of them, such that every pair consists of each number.
+Each array element may belong to one pair only. Is it possible to use all of the integers?
+
+Write a function class Solution {public boolean solution (int[] A);}
+
+that, given an array A consisting of N integers, returns whether it is possible to split all integers into pairs
+
+Examples:
+1. Given A = [1,2,2,1], your function should return True, as the pairs are (A[0], A[3]) (both have value 1) and (A[1],A[2])
+(both have value 2).
+
+2. Given A =[7,7,7], your function should return False, as you can make one pair of numbers 7, but you still have a single 7 left.
+
+3. Given A [1,2,2,3], your function should return False, as there's nothing that A[0] can be paired with.
+
+Write an efficient algorithm for the following assumptions:
+    - N is an integer within the range [1..100,000];
+    - each element of array A is an integer within the range [-1,000,000..1,000,000].
+
+
+
+
+
+
+
+
+
+
+# 3
+
+We are given a String S consisting of N letters. We want to find the alphabetically largest letter that occurs in
+both lowercase and uppercase in S, or decide that there is no such letter.
+
+Note: One letter alphabetically larger than another if it occurs later in English alphabetical order.
+For example, "E" is alphabetically larger than "B".
+
+Write a function class Solution {public String solution(String S)}
+
+that, given a string S, return a string consisting of one letter -
+the alphabetically largest of all letters that occur in both lowercase and uppercase in S.
+The returned letter should be in uppercase.
+
+Examples:
+1. Given S = "aaBabcDaA", your function should return "B".
+Letters occurring in both lowercase and uppercase are: "A", "B" ("B" is alphabetically largest).
+
+2. Given S = "Codility", you function should return "NO".
+There is no letter that occurs in both lowercase and uppercase.
+
+3. Given S = "WeTestCodErs", you function should return "T".
+Letters occurring in both lowercase and uppercase are: "E", "T" ("T" is alphabetically largest).
+
+Write an efficient algorithm for the following assumptions:
+    - N is an integer within the range [1..200,000];
+    - string S consists only of letters (a-z and/or A-Z)
+
+
+
+
+
