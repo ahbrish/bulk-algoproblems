@@ -51,6 +51,7 @@ public class Problem03 {
             Set<Integer> entryValue = entry.getValue();
 
             if (entryValue.contains(number)){
+                response = new Integer[entryValue.size()];
                 System.arraycopy(entryValue.toArray(),0, response, 0, entryValue.size());
             }
         }
