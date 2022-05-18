@@ -45,8 +45,6 @@ public class Problem03 {
         Integer response[] = null;
         // iterate through the map to look at each value
         for (Map.Entry<Integer, Set<Integer>> entry : familiesMap.entrySet()){
-            // declare a variable to hold the key
-            Integer entryKey = entry.getKey();
             // declare a variable to hold the value (remember the value is a Set)
             Set<Integer> entryValue = entry.getValue();
 
@@ -55,8 +53,6 @@ public class Problem03 {
                 System.arraycopy(entryValue.toArray(),0, response, 0, entryValue.size());
             }
         }
-        System.out.println(response);
-
-        return null;
+        return response;
     }
 }
