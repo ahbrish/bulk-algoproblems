@@ -1,34 +1,38 @@
 package algos.codeprep01;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class Problem01 {
     public Integer countDuplicateLetters(String input, String letter){
-        // return type Integer
-        // count the number of times you see the letter specified
+        // return type integer
+        // given a letter count the number of times it appears in the input
 
-        // declare an array and split the input
-        String wordArray[] = input.split(" ");
+        // convert the input to all lowercase letters and separate each character
+        char charArray[] = input.toLowerCase().toCharArray();
 
-        // declare a hashmap with a character and integer key value pair to store the occurrences of each letter
-        HashMap<String, Integer> letterMap = new HashMap<>();
+        // create a hashmap to store the number of occurrence of each letter
+        Map<Character, Integer> charMap = new HashMap<>();
 
-        // using a for loop iterate through the indexed words
-        for (int i = 0; i < wordArray.length; i++) {
-            String[] letterArray = wordArray[i].split("");
-            for(int j = 0; j < letterArray.length; j++){
-            String currentLetter = letterArray[j];
+        // iterate through the charArray
+        for (int i = 0; i < charArray.length; i++){
+            Character currentChar = charArray[i];
 
-            if (!letterMap.containsKey(currentLetter.toLowerCase())){
-                letterMap.put(currentLetter.toLowerCase(), 1);
-            } else {
-                Integer count = letterMap.get(currentLetter.toLowerCase());
-                letterMap.put(currentLetter.toLowerCase(), ++count);
-                }
+            if(!charMap.containsKey(currentChar)){
+                charMap.put(currentChar, 1);
+            }
+            else{
+                Integer valueCount = charMap.get(currentChar);
+                charMap.put(currentChar, ++valueCount);
             }
         }
 
-        return letterMap.get(letter);
+        for (Map.Entry<Character, Integer> entry: charMap.entrySet()){
+            System.out.println(entry);
+        }
+
+
+        return charMap.get(letter.charAt(0));
     }
 }
