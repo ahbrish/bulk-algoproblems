@@ -29,10 +29,14 @@ public class Problem01 {
         }
 
         for (Map.Entry<Character, Integer> entry: charMap.entrySet()){
-            System.out.println(entry);
+//            System.out.println(entry);
         }
 
+        Character theCharToFind = letter.charAt(0);
+        Boolean isCharInMap = charMap.containsKey(theCharToFind);
+        Integer valueOfChar = charMap.get(theCharToFind);
+        Integer output = isCharInMap? valueOfChar : 0;
 
-        return charMap.get(letter.charAt(0));
+        return output;
     }
 }

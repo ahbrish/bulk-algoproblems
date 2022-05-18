@@ -3,16 +3,20 @@ package algos.codeprep01;
 import java.util.ArrayList;
 
 public class Problem02 {
-    public static Integer cousinTag(ArrayList<String> cousins, Integer startIndex, String targetName){
+    public static Integer cousinTag(ArrayList<String> cousins, Integer startIndex, String targetName) {
         // return type Integer
-        // Given the name of the next person needed, determine the minimum number of left or right moves to reach it
+        // determine the minimum number of left or right moves to reach the target
 
-        // we know target location, the name of the person we want to find
-        int targetLocation = cousins.indexOf(targetName);
-        int goLeft = Math.abs(startIndex - targetLocation);
-        int length = cousins.size();
-        int goRight = Math.abs(cousins.size()-startIndex-targetLocation);
+        // determine the index of the person to be tagged
+        Integer targetIndex = cousins.indexOf(targetName);
+        // determine the distance going left, take the index of the target person and subtract the index of the start person
+        Integer goLeft = Math.abs(targetIndex - startIndex);
+        // determine the distance going right, take the size of the array or number of players and subtract the index of the starting person
+        Integer goRight = Math.abs(cousins.size()-startIndex);
 
-        return Math.min(goLeft,goRight);
+        // use the math.min function to store the shortest distance
+        Integer shortestDistance = Math.min(goLeft,goRight);
+
+        return shortestDistance;
     }
 }

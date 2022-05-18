@@ -18,7 +18,7 @@ public void countDuplicateLettersTest01(){
 
 # Problem 02 - Cousin Tag
 
-You have program representing a few cousins at the family reunion want to play a game of tag.
+You have program representing a few cousins at the family reunion who want to play a game of tag.
 The program holds n cousins names in the order they are standing left to right.
 You want to move through one name at a time, either moving left or right, in the shortest amount of moves.
 The application's name display is circular, so when the last person in the array is reached in either direction,
