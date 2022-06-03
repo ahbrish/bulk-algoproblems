@@ -10,7 +10,7 @@ public class PickingTickets {
     The function accepts INTEGER_ARRAY ticket as parameter.
      */
     public int map(){
-        maxTickets();
+//        maxTickets();
         return 0;
     }
 

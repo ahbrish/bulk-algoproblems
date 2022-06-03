@@ -38,4 +38,14 @@ public class ToolListTest {
         Integer actual = toolList.toolchanger(tools,startingIndex,name);
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void testThree(){
+        List<String> tools = new ArrayList<>(Arrays.asList("ballendmill","facemill", "keywaycutter", "slotdrill"));
+        Integer startingIndex = 1;
+        String name = "slotdrill";
+        Integer expected = 2;
+        Integer actual = toolList.toolchanger(tools,startingIndex,name);
+        assertEquals(expected,actual);
+    }
 }

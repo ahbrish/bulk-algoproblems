@@ -32,27 +32,4 @@ public class Problem01 {
 //        Integer output = isLetterInMap? valueOfLetter : 0; // is 'a' in the letterMap? if yes return the value : if no return 0;
         return letterMap.get(theLetter);
     }
-//
-
-
-//        input = input.toLowerCase();
-//
-//        HashMap<Character, Integer> charCounter = new HashMap<>();
-//
-//        for (int i = 0; i < input.length(); i++){
-//            Character c = input.charAt(i);
-//
-//            if(charCounter.containsKey(c)){
-//                int count = charCounter.get(c) +1;
-//                charCounter. put(c, count);
-//            }
-//
-//            else{
-//                charCounter.put(c, 1);
-//            }
-//        }
-//
-//        Integer response = (charCounter.containsKey(letter.charAt(0)))? charCounter.get(letter.charAt(0)):0;
-//        return response;
-//    }
 }
