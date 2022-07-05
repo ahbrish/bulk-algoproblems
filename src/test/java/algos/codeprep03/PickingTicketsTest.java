@@ -9,8 +9,6 @@ import java.util.List;
 
 public class PickingTicketsTest {
 
-//    String
-
     @Test
     public void testOne(){
         List<Integer> input = Arrays.asList(8, 5, 4, 8, 4);

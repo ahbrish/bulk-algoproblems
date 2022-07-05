@@ -15,14 +15,6 @@ public class ToolList {
 
     public static int toolchanger(List<String> tools, int startIndex, String target){
 
-        // declare a variable to hold targetToolLocation
-        int targetToolLocation = tools.indexOf(target);
-
-        int length = tools.size();
-        // declare variables to hold going left and going right
-        int goRight = Math.abs(startIndex - targetToolLocation);
-        int goLeft = Math.abs(tools.size() - startIndex - targetToolLocation);
-
-        return Math.min(goLeft,goRight);
+        return 0;
     }
 }

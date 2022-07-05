@@ -1,0 +1,26 @@
+# Make Me a Palindrome
+
+A Palindrome is a string of letters that can be spelled
+the same from front to back for example racecar
+
+Given a string if the string can be arranged into a palindrome
+in alphabetical order return the created palindrome.
+
+Example:
+`````
+String input = "aab";
+String expected = "aba";
+String actual = Solution.makeMeAnPalindrome(input);
+Assertions.assertEquals(expected, actual);
+`````
+
+If the string cannot be arranged into a palindrome
+in alphabetical order return the word nope
+
+Example :
+`````
+String input = "aaabbbb";
+String expected = "nope";
+String actual = Solution.makeMeAnPalindrome(input);
+Assertions.assertEquals(expected, actual);
+`````
