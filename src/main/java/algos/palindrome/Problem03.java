@@ -2,16 +2,10 @@ package algos.palindrome;
 
 public class Problem03 {
 
-    private static boolean checkPalindrome(String s, int frontPointer, int endPointer) {
+    private static Boolean checkPalindrome(String s, int frontPointer, int endPointer){
 
-        String word = s;
-        int front = frontPointer;
-        int end = endPointer;
-
-        for (int x = frontPointer; x < s.length()/2; x++ ){
-            Character firstChar = s.charAt(frontPointer);
-            Character lastChar = s.charAt(endPointer);
-            if (firstChar == lastChar){
+        for (int x = frontPointer; x < s.length()/2; x++){
+            if (s.charAt(frontPointer) == s.charAt(endPointer)){
                 return true;
             }
             endPointer += -1;
@@ -21,17 +15,22 @@ public class Problem03 {
 
     public static Boolean validPalindrome(String s){
 
-        // declare a variable to store the lastChar
-        int endPointer = s.length()-1;
+        // split string s and put letter into an array
+        String[] letters = s.split("");
+        // store the index of last variable into a variable
+        Integer lastIndex = s.length()-1;
+        // using a for loop iterate through the letters array
+        for (int frontPointer = 0; frontPointer < letters.length/2; frontPointer++){
+            // declare a variable to hold the front letter and end letter
+            String firstChar = letters[frontPointer];
+            String lastChar = letters[lastIndex];
 
-
-        for (int frontPointer = 0; frontPointer < s.length()/2; frontPointer++){
-            Character firstChar = s.charAt(frontPointer);
-            Character lastChar = s.charAt(endPointer);
-            if (firstChar != lastChar){
-                return (checkPalindrome(s,frontPointer ,endPointer - 1) || checkPalindrome(s,frontPointer + 1,endPointer));
+            if (firstChar != lastChar) {
+                return (checkPalindrome(s, frontPointer, lastIndex - 1)
+                        ||
+                        checkPalindrome(s, frontPointer + 1, lastIndex));
             }
-            endPointer += -1;
+            lastIndex += -1;
         }
         return true;
     }

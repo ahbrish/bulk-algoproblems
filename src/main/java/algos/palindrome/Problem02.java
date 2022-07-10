@@ -1,27 +1,40 @@
 package algos.palindrome;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Problem02 {
     public static Boolean isPalindrome(String s){
 
         // return type Boolean
+        // first turn to lowercase, remove all spaces, and punctuations and store in a variable
+        String preppedWord = s.toLowerCase().replaceAll("[^A-Za-z]+", "");
 
-        // make all letter to lowercase and remove punctuations
-        String word = s.toLowerCase().replaceAll("[^A-Za-z]+", "");
-        // using for loop iterate through the String s and remove non-alphanumeric characters
+        // split letters and store in an array
+        String[] letters = preppedWord.split("");
 
-        // declare a variable to store index of last character
-        Integer endOfWord = word.length() - 1;
+        // create a lettersMap
+        Map<String, Integer> lettersMap = new HashMap<>();
 
-        // using for loop iterate through the String s
-        for (int i = 0; i < word.length()/2; i++){
-            // declare a variable to store the currentLetter
-            Character currentLetter = word.charAt(i);
-            // declare a variable to store the lastLetter
-            Character lastLetter = word.charAt(endOfWord);
+        for (int i = 0; i < letters.length; i++){
 
-            endOfWord = endOfWord -1;
+            if (!lettersMap.containsKey(letters[i])){
+                lettersMap.put(letters[i], 1);
+            } else {
+                Integer count = lettersMap.get(letters[i]);
+                lettersMap.put(letters[i], ++count);
+            }
+        }
 
-            if(currentLetter != lastLetter){
+        Integer oddCount = 0;
+        for (Map.Entry<String, Integer> entry : lettersMap.entrySet()){
+            Integer value = entry.getValue();
+
+            if (value % 2 != 0){
+                oddCount++;
+            }
+
+            if (oddCount > 1){
                 return false;
             }
         }
